@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 16
 script:
-  - npm build
+  - npm run build
   - echo "Commit sha - $TRAVIS_COMMIT"
   - mkdir -p dist/@femiarks/root-config/$TRAVIS_COMMIT
   - mv dist/*.* dist/@femiarks/root-config/$TRAVIS_COMMIT/
@@ -17,4 +17,4 @@ deploy:
   local_dir: dist
   skip_cleanup: true
   on:
-    branch: master
+    branch: main
